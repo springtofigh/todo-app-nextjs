@@ -50,12 +50,12 @@ const TodoPage = ({todo}) => {
             <button 
             onClick={() => router.push("/")}
             type="button"
-            className="w-full py-2 text-blue-500 border border border-blue-500 rounded-lg transition-all duration-300 ease-in-out">
+            className="w-full py-2 text-blue-500 border border-blue-500 rounded-lg transition-all duration-300 ease-in-out">
                 Cancel
             </button>
             <button 
             type="submit"
-            className="w-full py-2 bg-blue-500 border border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">
+            className="w-full py-2 bg-blue-500 border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">
               Edit your todo
               </button>
         </div>
