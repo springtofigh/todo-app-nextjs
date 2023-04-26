@@ -11,7 +11,7 @@ const TodoForm = ({ onAdd }) => {
             <div>
                 <button 
             onClick={() => setIsShow(true)}
-            className="w-full py-2 px-8 font-bold bg-blue-500 border border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">
+            className="w-full py-2 px-8 font-bold bg-blue-500 border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">
             Add new todo?
                 </button>
             </div>
@@ -22,7 +22,7 @@ const TodoForm = ({ onAdd }) => {
     <form className="w-full max-w-md bg-white p-2 md:p-4 rounded-xl" onSubmit={(e) => onAdd(e, formData)}>
         <div className="mb-4">
             <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
-                Title
+                عنوان
             </label>
             <input 
             name="title"
@@ -49,12 +49,12 @@ const TodoForm = ({ onAdd }) => {
             <button 
             onClick={() => setIsShow(false)}
             type="button"
-            className="w-full py-2 text-blue-500 border border border-blue-500 rounded-lg transition-all duration-300 ease-in-out">
+            className="w-full py-2 text-blue-500 border border-blue-500 rounded-lg transition-all duration-300 ease-in-out">
                 Cancel
             </button>
             <button 
             type="submit"
-            className="w-full py-2 bg-blue-500 border border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">Add new todo</button>
+            className="w-full py-2 bg-blue-500 border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">Add new todo</button>
         </div>
     </form>
     );

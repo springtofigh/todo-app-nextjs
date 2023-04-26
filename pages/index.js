@@ -3,6 +3,7 @@ import { useState } from "react";
 import TodoList from "../components/todos/TodoList";
 import TodoForm from "../components/todos/AddNewTodo";
 import Todo from "../server/models/todo"
+import Layout from "../containers/Layout";
 
 const fetcher = async () => {
   const { data } = await axios.get("/api/todos");
@@ -45,10 +46,7 @@ export default function Home( {todos} ) {
     .catch((err) => console.log(err))
   }
   return (
-    <div className="bg-gray-50 min-h-screen">
-        <nav className="w-full bg-white flex justify-center py-4 mb-6">
-          <h1 className="font-bold">Todo List using Next.js and tailwindCss</h1>
-        </nav>
+    <Layout>
         <div className="container p-2 xl:max-w-screen-xl mx-auto">
           <section className="flex md:flex-row mid:items-start md:justify-center gap-x-8 flex-col gap-y-8">
             {/* TODOFORM */}
@@ -57,12 +55,12 @@ export default function Home( {todos} ) {
             <TodoList data={data} onDelete={deleteTodo} onComplete={completeHandler} />
           </section>
         </div>
-      </div>
+    </Layout>
   );
 }
 
 export async function getServerSideProps() {
-  const todo = await Todo.find({})
+  const todos = await Todo.find({})
   return {
     props: {
       todos: JSON.parse(JSON.stringify(todos))
