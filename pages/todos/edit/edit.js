@@ -25,11 +25,11 @@ const TodoPage = ({ todo }) => {
   return (
     <Layout>
       <div className="flex items-center flex-col">
-        <h1 className="text-xl font-bold mb-4">Todo Edit Page</h1>
+        <h1 className="text-xl font-bold mb-4">صفحه ادیت تودو</h1>
         <form className="w-full max-w-md bg-white p-2 md:p-4 rounded-xl" onSubmit={submitHandler}>
           <div className="mb-4">
             <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
-              Title
+              عنوان
             </label>
             <input
               name="title"
@@ -43,7 +43,7 @@ const TodoPage = ({ todo }) => {
           </div>
           <div className="mb-4">
             <label className="text-gray-600 mb-1 block" htmlFor="todo-description">
-              Description
+              توضیحات
             </label>
             <textarea
               value={formData.description}
@@ -63,7 +63,7 @@ const TodoPage = ({ todo }) => {
               onChange={() => setChecked(!checked)}
             />
 
-            <label htmlFor="checked">complete todo</label>
+            <label htmlFor="checked">کار های انجام شده</label>
           </div>
           <div className="flex items-center gap-x-4">
             <button
@@ -71,13 +71,13 @@ const TodoPage = ({ todo }) => {
               type="button"
               className="w-full py-2 text-blue-500 border border-blue-500 rounded-lg  transition-all duration-300 ease-in-out"
             >
-              Back
+              بازگشت
             </button>
             <button
               type="submit"
               className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out"
             >
-              Update todo
+              آپدیت کار
             </button>
           </div>
         </form>
