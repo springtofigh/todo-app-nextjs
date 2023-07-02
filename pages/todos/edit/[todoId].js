@@ -35,7 +35,7 @@ const TodoPage = ({ todo }) => {
               name="title"
               placeholder="todo title ..."
               id="todo-title"
-              className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 focus:border-none w-full block transition duration-300 ease-out"
+              className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-red-400 focus:border-none w-full block transition duration-300 ease-out"
               type="text"
               value={formData.title}
               onChange={changeHandler}
@@ -50,7 +50,7 @@ const TodoPage = ({ todo }) => {
               onChange={changeHandler}
               name="description"
               id="todo-description"
-              className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 focus:border-none w-full block transition duration-300 ease-out"
+              className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-red-400 focus:border-none w-full block transition duration-300 ease-out"
             ></textarea>
           </div>
           <div className="mb-8">
@@ -69,15 +69,15 @@ const TodoPage = ({ todo }) => {
             <button
               onClick={() => router.push("/")}
               type="button"
-              className="w-full py-2 text-blue-500 border border-blue-500 rounded-lg  transition-all duration-300 ease-in-out"
+              className="w-full py-2 text-red-500 border border-rose-500 rounded-lg  transition-all duration-300 ease-in-out"
             >
               بازگشت
             </button>
             <button
               type="submit"
-              className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out"
+              className="w-full py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-400 transition-all duration-300 ease-in-out"
             >
-              آپدیت کار
+              آپدیت تودو
             </button>
           </div>
         </form>

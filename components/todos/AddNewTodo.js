@@ -26,9 +26,9 @@ const TodoForm = ({ onAdd }) => {
             </label>
             <input 
             name="title"
-            placeholder=" todo title ..." 
+            placeholder=" ...عنوان تودو" 
             id="todo-title" 
-            className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 focus:border-none w-full block transition duration-300 ease-out"
+            className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-red-400 focus:border-none w-full block transition duration-300 ease-out"
             type="text"
             value={formData.title} 
             onChange={changeHandler}/>
@@ -42,19 +42,21 @@ const TodoForm = ({ onAdd }) => {
         name="description"
         id="todo-description"
         value={formData.description} 
-        className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 focus:border-none w-full block transition duration-300 ease-out">
+        className="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-red-400 focus:border-none w-full block transition duration-300 ease-out">
         </textarea>
         </div>
         <div className="flex items-center gap-x-4">
             <button 
             onClick={() => setIsShow(false)}
             type="button"
-            className="w-full py-2 text-blue-500 border border-blue-500 rounded-lg transition-all duration-300 ease-in-out">
+            className="w-full py-2 text-red-500 border border-rosr-500 rounded-lg transition-all duration-300 ease-in-out">
                 کنسل
             </button>
             <button 
             type="submit"
-            className="w-full py-2 bg-blue-500 border border-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out">Add new todo</button>
+            className="w-full py-2 bg-rose-600 border border-rose-500 text-white rounded-lg hover:bg-rose-700 transition-all duration-300 ease-in-out">
+                اضافه کردن تودو
+            </button>
         </div>
     </form>
     );
