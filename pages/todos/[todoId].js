@@ -1,17 +1,19 @@
-import Layout from "@/containers/Layout";
-import { getOneTodo } from "@/api/todos/[todoId]";
-import dbConnect from "@/server/utils/dbConnect";
+import Layout from "../../containers/Layout";
+import { getOneTodo } from "../api/todos/[todoId]";
+import dbConnect from "../../server/utils/dbConnect";
 
 const TodoPage = ({ todo }) => {
   return (
     <Layout>
-      <div className="">
-        <h1 className="text-xl font-bold mb-4">Todo Detail Page</h1>
+      <div className="text-white text-center">
+        <h1 className="text-xl font-bold mb-4">
+          صفحه جزئیات تودو
+        </h1>
         <h2>
-          <strong className="font-bold">title</strong> : {todo.title}
+          <strong className="font-bold">عنوان</strong> : {todo.title}
         </h2>
         <p>
-          <strong className="font-bold">description</strong> : {todo.description}
+          <strong className="font-bold">توضیحات</strong> : {todo.description}
         </p>
       </div>
     </Layout>
