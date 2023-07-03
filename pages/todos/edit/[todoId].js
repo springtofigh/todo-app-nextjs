@@ -25,7 +25,7 @@ const TodoPage = ({ todo }) => {
   return (
     <Layout>
       <div className="flex items-center flex-col">
-        <h1 className="text-xl font-bold mb-4">صفحه ادیت تودو</h1>
+        <h1 className="text-xl text-white font-bold mb-4">صفحه ادیت تودو</h1>
         <form className="w-full max-w-md bg-white p-2 md:p-4 rounded-xl" onSubmit={submitHandler}>
           <div className="mb-4">
             <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
@@ -63,19 +63,19 @@ const TodoPage = ({ todo }) => {
               onChange={() => setChecked(!checked)}
             />
 
-            <label htmlFor="checked">کار های انجام شده</label>
+            <label htmlFor="checked">تودو های انجام شده</label>
           </div>
           <div className="flex items-center gap-x-4">
             <button
               onClick={() => router.push("/")}
               type="button"
-              className="w-full py-2 text-red-500 border border-rose-500 rounded-lg  transition-all duration-300 ease-in-out"
+              className="w-full py-2 text-red-500 border border-rose-500 font-medium rounded-lg  transition-all duration-300 ease-in-out"
             >
               بازگشت
             </button>
             <button
               type="submit"
-              className="w-full py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-400 transition-all duration-300 ease-in-out"
+              className="w-full py-2 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-400 transition-all duration-300 ease-in-out"
             >
               آپدیت تودو
             </button>

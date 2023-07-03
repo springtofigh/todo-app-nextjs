@@ -6,7 +6,7 @@ const TodoList = ({ data, onDelete, onComplete }) => {
     <div className="w-full max-w-screen-md bg-white p-2 md:p-4 rounded-xl">
             {data.map((todo) => {
             return(
-                <div key={data.id} className="w-full max-w-screen-md bg-white p-2 md:p-4 rounded-xl">
+                <div key={todo.id} className="w-full max-w-screen-md bg-white font-medium p-2 md:p-4 rounded-xl">
                 <div className="flex items-center justify-between border border-gray-100 mb-4 p-3 md:p-4 rounded-xl">
                 <Link href={`/todos/${todo._id}`}>
                 <a>

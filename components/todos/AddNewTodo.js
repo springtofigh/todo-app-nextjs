@@ -49,12 +49,12 @@ const TodoForm = ({ onAdd }) => {
             <button 
             onClick={() => setIsShow(false)}
             type="button"
-            className="w-full py-2 text-red-500 border border-rosr-500 rounded-lg transition-all duration-300 ease-in-out">
+            className="w-full py-2 text-red-500 border border-rose-500 font-medium rounded-lg transition-all duration-300 ease-in-out">
                 کنسل
             </button>
             <button 
             type="submit"
-            className="w-full py-2 bg-rose-600 border border-rose-500 text-white rounded-lg hover:bg-rose-700 transition-all duration-300 ease-in-out">
+            className="w-full py-2 bg-rose-600 border border-rose-500 text-white font-medium rounded-lg hover:bg-rose-400 transition-all duration-300 ease-in-out">
                 اضافه کردن تودو
             </button>
         </div>

@@ -15,10 +15,10 @@ export default function Home( {todos} ) {
   const [data, setData] = useState(todos);
 
   const deleteTodo = (id) => {
+    console.log({id});
     axios
     .delete(`/api/todos/${id}`)
     .then(({ data }) => {
-      console.log(res.data);
       setData(data.todos);
       setLoading(false);
     })
