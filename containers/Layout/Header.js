@@ -4,7 +4,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 function Header() {
 
   const { datat: session , status } = useSession();
-  console.log({ session , status });
+
   return (
     <div className="bg-rose-500 w-full shadow-lg">
         <nav className="w-full bg-rose-500 flex justify-between py-4 mb-6 max-w-screen-xl mx-auto">
