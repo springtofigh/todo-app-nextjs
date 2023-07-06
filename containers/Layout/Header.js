@@ -26,7 +26,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link href="profile">
+            <Link href="/profile">
             <a>
               پروفایل
             </a>
