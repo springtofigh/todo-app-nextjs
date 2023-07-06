@@ -10,7 +10,7 @@ import { useSession } from "next-auth/react";
 export default function Home({ todos }) {
   const [data, setData] = useState(todos);
   const { datat: session , status } = useSession();
-  console.log({ session , status });
+  // console.log({ session , status });
 
   const deleteTodo = (id) => {
     console.log({id});
