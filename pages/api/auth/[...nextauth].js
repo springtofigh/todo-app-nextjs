@@ -3,7 +3,7 @@ import GithubProvider from "next-auth/providers/github";
 import { MongoDBAdapter } from "@auth/mongodb-adapter"
 import clientPromise from "../../../server/lib/mongodb"
 
-export const authOptions = {
+export default NextAuth({
   // Configure one or more authentication providers
   providers: [
     GithubProvider({
@@ -14,23 +14,26 @@ export const authOptions = {
   ],
   adapter: MongoDBAdapter(clientPromise),
   session: {
-    strategy: "jet"
+    strategy: "jwt"
   },
   jwt: {
-    secret:process.env.SECRET_JWT,
+    secret: process.env.SECRET_JWT,
   },
   callbacks: {
-    async session({ session, token, user }) {
-      // session.user.id = token.id
+    async session({ session, token }) {
+      session.user.id = token.id;
+      session.accessToken = token.accessToken;
       return session;
     },
-    async jwt({ token, user, account, profile, isNewUser }) {
+    async jwt({ token, user, account }) {
       console.log({jwtUser : user});
-      // if(user) {
-      // token.id = user.id
-      // }
+      if (user) {
+        token.id = user.id;
+      }
+      if (account) {
+        token.accessToken = account.access_token;
+      }
       return token;
-    }
-  }
-}
-export default NextAuth(authOptions)
+    },
+  },
+});
