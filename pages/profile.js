@@ -1,5 +1,6 @@
 import Layout from "../containers/Layout";
 import { useSession , signIn } from "next-auth/react";
+import Loader from "../shared/Loader";
 
 const profile = () => {
   const { data: session , status } = useSession({
@@ -12,10 +13,8 @@ const profile = () => {
   if (status === "loading") {
     return (
       <Layout>
-      <div>
-        ... در حال لود شدن
-      </div>
-    </Layout>
+        <Loader/>
+      </Layout>
     )    
   }
   return (
