@@ -5,12 +5,10 @@ import TodoForm from "../components/todos/AddNewTodo";
 import dbConnect from "../server/utils/dbConnect";
 import Todo from "../server/models/todo"
 import Layout from "../containers/Layout";
-import { useSession } from "next-auth/react";
+
 
 export default function Home({ todos }) {
   const [data, setData] = useState(todos);
-  const { datat: session , status } = useSession();
-  // console.log({ session , status });
 
   const deleteTodo = (id) => {
     console.log({id});
