@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useState } from "react"
 import { useSession , getSession } from "next-auth/react"
-import dbConnect from "../server/utils/dbConnect"
-import Todo from "../server/models/todo"
-import Layout from "../containers/Layout"
-import ProfileTodo from "../components/todos/ProfileTodo"
+import dbConnect from "@/server/utils/dbConnect"
+import Todo from "@/server/models/todo"
+import Layout from "@/containers/Layout"
+import ProfileTodo from "@/components/todos/ProfileTodo"
 
 
 const todos = ({ todos }) => {

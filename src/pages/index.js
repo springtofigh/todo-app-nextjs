@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import TodoList from "../components/todos/TodoList";
-import TodoForm from "../components/todos/AddNewTodo";
-import dbConnect from "../server/utils/dbConnect";
-import Todo from "../server/models/todo"
-import Layout from "../containers/Layout";
+import TodoList from "@/components/todos/TodoList";
+import TodoForm from "@/components/todos/AddNewTodo";
+import dbConnect from "@/server/utils/dbConnect";
+import Todo from "@/server/models/todo";
+import Layout from "@/containers/Layout";
 
 
 export default function Home({ todos }) {

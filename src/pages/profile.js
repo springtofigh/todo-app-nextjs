@@ -1,6 +1,6 @@
-import Layout from "../containers/Layout";
+import Layout from "@/containers/Layout";
 import { useSession , signIn } from "next-auth/react";
-import Loader from "../shared/Loader";
+import Loader from "../../shared/Loader";
 
 const profile = () => {
   const { data: session , status } = useSession({

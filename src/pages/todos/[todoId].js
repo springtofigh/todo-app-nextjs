@@ -1,6 +1,6 @@
-import Layout from "../../containers/Layout";
-import { getOneTodo } from "../api/todos/[todoId]";
-import dbConnect from "../../server/utils/dbConnect";
+import Layout from "@/containers/Layout";
+import { getOneTodo } from "@/api/todos/[todoId]";
+import dbConnect from "@/server/utils/dbConnect";
 
 const TodoPage = ({ todo }) => {
   return (
