@@ -20,7 +20,8 @@ export default async function handler(req,res) {
         const todo = await Todo.findById(query.todoId);
         console.log(body);
         todo.title = body.todo.title;
-        todo.descriptio = body.todo.descriptio;
+        todo.description = body.todo.description;
+        todo.isCompleted = body.todo.isCompleted;
         await todo.save();
         const todos = await Todo.find({});
         return res.status(200).json({ message: "todo edited successfully" , todos});
