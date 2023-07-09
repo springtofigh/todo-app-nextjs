@@ -19,7 +19,7 @@ const profile = () => {
   }
   return (
     <Layout>
-        <h1 className="text-slate-100">
+        <h1 className="text-slate-100 text-center">
         {session.user.name},
           سلام
           به پروفایلت خوش اومدی
