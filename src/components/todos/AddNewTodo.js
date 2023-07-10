@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 const TodoForm = ({ onAdd , formData , changeHandler }) => {
-    // const [formData, setFormData] = useState( {title:"" , description:""});
     const [isShow, setIsShow] = useState(false);
-
-    // const changeHandler = (e) => setFormData({...formData , [e.target.name]: e.target.value});
 
     if (!isShow) {
         return (
