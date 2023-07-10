@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const TodoForm = ({ onAdd }) => {
-    const [formData, setFormData] = useState( {title:"" , description:""});
+const TodoForm = ({ onAdd , formData , changeHandler }) => {
+    // const [formData, setFormData] = useState( {title:"" , description:""});
     const [isShow, setIsShow] = useState(false);
 
-    const changeHandler = (e) => setFormData({...formData , [e.target.name]: e.target.value});
+    // const changeHandler = (e) => setFormData({...formData , [e.target.name]: e.target.value});
 
     if (!isShow) {
         return (
@@ -12,7 +12,7 @@ const TodoForm = ({ onAdd }) => {
                 <button 
             onClick={() => setIsShow(true)}
             className="w-full py-2 px-8 font-bold bg-rose-600 border border-rose-500 text-white rounded-lg hover:bg-rose-400 transition-all duration-300 ease-in-out">
-            اضافه کردن کار جدید؟
+            اضافه کردن تودوی جدید؟
                 </button>
             </div>
         )

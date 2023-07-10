@@ -9,6 +9,9 @@ import Layout from "@/containers/Layout";
 
 export default function Home({ todos }) {
   const [data, setData] = useState(todos);
+  const [formData, setFormData] = useState( {title:"" , description:""});
+
+  const changeHandler = (e) => setFormData({...formData , [e.target.name]: e.target.value});
 
   const deleteTodo = (id) => {
     console.log({id});
@@ -30,7 +33,7 @@ export default function Home({ todos }) {
       setLoading(false)
     })
     .catch((err) => console.log(err))
-
+    setFormData({ title: "", description: "" });
   };
 
   const completeHandler = (id) => {
@@ -47,7 +50,7 @@ export default function Home({ todos }) {
         <div className="container p-2 xl:max-w-screen-xl mx-auto">
           <section className="flex md:flex-row mid:items-start md:justify-center gap-x-8 flex-col gap-y-8">
             {/* TODOFORM */}
-            <TodoForm  onAdd={addTodo} />
+            <TodoForm  onAdd={addTodo} formData={formData} changeHandler={changeHandler} />
             {/* TODOLIST */}
             <TodoList data={data} onDelete={deleteTodo} onComplete={completeHandler} />
           </section>
