@@ -28,7 +28,7 @@ const TodoPage = ({ todo }) => {
         <h1 className="text-xl text-white font-bold mb-4">صفحه ادیت تودو</h1>
         <form className="w-full max-w-md bg-white p-2 md:p-4 rounded-xl" onSubmit={submitHandler}>
           <div className="mb-4">
-            <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
+            <label className="text-gray-600 mb-1 block text-right" htmlFor="todo-title">
               عنوان
             </label>
             <input
@@ -42,7 +42,7 @@ const TodoPage = ({ todo }) => {
             />
           </div>
           <div className="mb-4">
-            <label className="text-gray-600 mb-1 block" htmlFor="todo-description">
+            <label className="text-gray-600 mb-1 block text-right" htmlFor="todo-description">
               توضیحات
             </label>
             <textarea

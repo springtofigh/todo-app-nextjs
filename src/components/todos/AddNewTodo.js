@@ -18,7 +18,7 @@ const TodoForm = ({ onAdd , formData , changeHandler }) => {
     return (
     <form className="w-full max-w-md bg-white p-2 md:p-4 rounded-xl" onSubmit={(e) => onAdd(e, formData)}>
         <div className="mb-4">
-            <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
+            <label className="text-gray-600 mb-1 block text-right" htmlFor="todo-title">
                 عنوان
             </label>
             <input 
@@ -31,7 +31,7 @@ const TodoForm = ({ onAdd , formData , changeHandler }) => {
             onChange={changeHandler}/>
         </div>
         <div className="mb-8">
-        <label className="text-gray-600 mb-1 block" htmlFor="todo-title">
+        <label className="text-gray-600 mb-1 block text-right" htmlFor="todo-title">
                 توضیحات
         </label>
         <textarea
