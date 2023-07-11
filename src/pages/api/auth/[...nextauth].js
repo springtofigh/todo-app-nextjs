@@ -26,7 +26,6 @@ export default NextAuth({
       return session;
     },
     async jwt({ token, user, account }) {
-      console.log({jwtUser : user});
       if (user) {
         token.id = user.id;
       }

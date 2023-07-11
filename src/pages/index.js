@@ -14,7 +14,6 @@ export default function Home({ todos }) {
   const changeHandler = (e) => setFormData({...formData , [e.target.name]: e.target.value});
 
   const deleteTodo = (id) => {
-    console.log({id});
     axios
     .delete(`/api/todos/${id}`)
     .then(({ data }) => {
@@ -37,7 +36,6 @@ export default function Home({ todos }) {
   };
 
   const completeHandler = (id) => {
-    console.log(id);
     axios
     .put(`/api/todos/complete/${id}`)
     .then(({data}) => {

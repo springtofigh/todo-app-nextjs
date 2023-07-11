@@ -9,7 +9,6 @@ import ProfileTodo from "@/components/todos/ProfileTodo"
 
 const todos = ({ todos }) => {
     const { data: session , status } = useSession();
-    console.log(session);
     const [data, setData] = useState(todos);
 
     const deleteTodo = (id) => {
@@ -23,7 +22,6 @@ const todos = ({ todos }) => {
     };
 
     const completeHandler = (id) => {
-      console.log(id);
       axios
       .put(`/api/todos/complete/${id}`)
       .then(({data}) => {
