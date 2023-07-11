@@ -7,7 +7,7 @@ import Layout from "@/containers/Layout"
 import ProfileTodo from "@/components/todos/ProfileTodo"
 
 
-const todos = ({ todos }) => {
+const Todos = ({ todos }) => {
     const { data: session , status } = useSession();
     const [data, setData] = useState(todos);
 
@@ -40,7 +40,7 @@ const todos = ({ todos }) => {
   )
 }
 
-export default todos;
+export default Todos;
 
 
 export async function getServerSideProps(ctx) {
