@@ -7,7 +7,7 @@ const ProfileTodo = ({ data, onDelete, onComplete }) => {
                 {data.map((todo) => {
                 return(
                 <div key={todo._id} className="w-full bg-white font-medium p-2 mb-2 md:p-4 rounded-xl">
-                    <div className="flex items-center justify-between border border-gray-100 mb-4 p-3 md:p-4 rounded-xl">
+                    <div className="flex items-center justify-between mb-4 p-3 md:p-2 rounded-xl">
                     <Link href={`/todos/${todo._id}`}>
                     <a>
                     <span className={`${todo.isCompleted ? "line-through" : ""}`}>{todo.title}</span>
