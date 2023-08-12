@@ -1,15 +1,18 @@
 // This approach is taken from https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
 import { MongoClient } from "mongodb";
 
-if (!process.env.MONGO_URI) {
-  throw new Error('Invalid/Missing environment variable: "MONGO_URI"');
-}
-
 const uri = process.env.MONGO_URI;
-const options = {};
+const options = {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+};
 
 let client;
 let clientPromise;
+
+if (!process.env.MONGO_URI) {
+  throw new Error("Please add your Mongo URI to .env.local");
+}
 
 if (process.env.NODE_ENV === "production") {
   if (!global._mongoClientPromise) {
