@@ -49,7 +49,7 @@ export async function getServerSideProps(ctx) {
   if (!session) {
     return {
       redirect: {
-        destination: "/api/auth/signin?callbackUrl=http://nextbttodoapp.vercel.app/todos",
+        destination: "/api/auth/signin",
         permanent: false,
       },
     };
