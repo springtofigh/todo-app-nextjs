@@ -12,13 +12,14 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
-  adapter: MongoDBAdapter(clientPromise),
   session: {
     strategy: "jwt"
   },
   jwt: {
     secret: process.env.SECRET_JWT,
   },
+  secret: process.env.NEXTAUTH_URL,
+  adapter: MongoDBAdapter(clientPromise),
   callbacks: {
     async session({ session, token }) {
       session.user.id = token.id;
@@ -36,5 +37,4 @@ export default NextAuth({
     },
   },
 
-  secret: process.env.NEXTAUTH_URL
 });
