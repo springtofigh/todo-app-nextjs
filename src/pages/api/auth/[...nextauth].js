@@ -7,8 +7,7 @@ export default NextAuth({
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-      // callbackUrl:"https://nextbttodoapp.vercel.app/api/auth/signin/github"
+      clientSecret: process.env.GITHUB_SECRET
     })
   ],
   session: {
